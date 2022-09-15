@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div ng-app ng-init="firstName='John';emp={emp_name:'reja',email:'rezaice07@gmail.com'};list=[{id:1,name:'A'},{id:2,name:'B'}]" >
+
+        <p>Input something in the input box:</p>
+        <p>Name: <input type="text" ng-model="name"></p>
+        <p ng-bind="name"></p>
+        <p ng-bind="firstName"></p>
+        <span>Accessing to object</span>
+        <p ng-bind="emp.emp_name"></p>
+
+        <span>Accessing to list of object</span>
+        <p ng-bind="list[0].id"></p>
+       
+    </div>
+
+</body>
+<script src="./assets/angular.min.js"></script>
+
+</html>

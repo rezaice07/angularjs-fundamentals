@@ -1,0 +1,26 @@
+
+http access and get the html files served on 8080:
+-------------------------------------------------------
+>npm install -g http-server
+
+>http-server
+if you have public (./public/index.html) folder it will be the root of your server if not will be the one that you run the server. you could send the folder as paramenter ex:
+
+http-server [path] [options]
+expected Result:
+
+*> Starting up http-server, serving ./public Available on:
+
+http://LOCALIP:8080
+
+http://127.0.0.1:8080
+
+Hit CTRL-C to stop the server
+
+http-server stopped.*
+
+Now, you can run: http://localhost:8080
+
+will open the index.html on the ./public folder
+
+references: https://www.npmjs.com/package/http-server

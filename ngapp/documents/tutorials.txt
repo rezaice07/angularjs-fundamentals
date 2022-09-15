@@ -1,0 +1,125 @@
+
+
+Angular Js CDN:
+-----------------
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+ng-directives
+--------------
+The ng-app directive defines an AngularJS application.
+
+The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.
+
+The ng-bind directive binds application data to the HTML view.
+
+The ng-init directive initializes AngularJS application variables.
+
+Example:01_ng_directives.html
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div ng-app ng-init="firstName='John'">
+
+        <p>Input something in the input box:</p>
+        <p>Name: <input type="text" ng-model="name"></p>
+        <p ng-bind="name"></p>
+         <p ng-bind="firstName"></p>
+
+    </div>
+
+</body>
+<script src="./assets/angular.min.js"></script>
+
+</html>
+
+
+AngularJS Expressions
+---------------------------
+AngularJS expressions can be written inside double braces: {{ expression }}.
+
+AngularJS expressions can also be written inside a directive: ng-bind="expression".
+
+AngularJS will resolve the expression, and return the result exactly where the expression is written.
+
+AngularJS expressions are much like JavaScript expressions: They can contain literals, operators, and variables.
+
+Example {{ 5 + 5 }} or {{ firstName + " " + lastName }}
+
+Example: 02_ng_expressions.html
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div ng-app ng-init="myCol='red'">
+
+        <p>My first expression: {{ 5 + 5 }} or {{ "Rejwanul" + " " + "Reja" }}</p>
+       <P>style</P>
+       <span style="background-color: {{myCol}}">This is style expression value</span>
+    </div>
+
+</body>
+<script src="./assets/angular.min.js"></script>
+
+</html>
+
+
+
+AngularJS Modules
+------------------------------
+A module is created by using the AngularJS function angular.module
+
+Example: 03_ng_modules
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div ng-app="myNgApp" ng-init="description='this is module description'">
+
+        <p>{{description}}</p>
+  
+    </div>
+
+</body>
+<script src="./assets/angular.min.js"></script>
+<script src="./assets/module.js"></script>
+
+</html>
+
+Note: The "myApp" parameter refers to an HTML element in which the application will run.
+
+Adding a Controller:
+Add a controller to your application, and refer to the controller with the ng-controller directive:
+
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "Rejwanul";
+    $scope.lastName = "Reja";
+  });
+
+--Example: 03_ng_modules
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div ng-app="myNgApp">
+        <div ng-controller="myCtrl">
+            <p>{{firstName}} {{lastName}}</p>
+        </div>
+    </div>
+
+</body>
+<script src="./assets/angular.min.js"></script>
+<script src="./assets/module.js"></script>
+<script src="./assets/moduleCtl.js"></script>
+
+</html>
+
+
+
+
+
