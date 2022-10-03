@@ -1204,7 +1204,9 @@
                       }
                   },
                   Title: 'Geographic Information',
-                  reloadOnSearch: false
+                  reloadOnSearch: false  
+
+                  
               }
           },
         ];
